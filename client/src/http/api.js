@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiAddress = 'http://localhost:5000';
+const apiAddress = process.env.REACT_APP_API_ADDRESS || 'http://localhost:5000';
 
 export class API {
     GetMailbox(from = 0, to = 20) {
