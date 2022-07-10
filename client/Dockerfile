@@ -4,7 +4,7 @@ FROM node:14.15.0-alpine3.12 as builder
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm install --production
+RUN npm install --legacy-peеr-deps
 
 COPY . ./
 

@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 
-let json = require('./../data/large.json'); //(with path)
+let json = require('./../data/large.json');
 
 
 /* Get mailbox */
