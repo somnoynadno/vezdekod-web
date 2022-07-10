@@ -1,5 +1,5 @@
 # Stage 1 - the build process
-FROM node:14.15.0-alpine3.12 as builder
+FROM node:14-alpine as builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY . ./
 RUN npm run build
 
 # Stage 2 - release
-FROM node:14.15.0-alpine3.12 as release
+FROM node:14-alpine as release
 
 WORKDIR /app
 COPY --from=builder /app/build ./build
