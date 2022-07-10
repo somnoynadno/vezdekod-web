@@ -6,6 +6,9 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install --legacy-peеr-deps
 
+ARG REACT_APP_API_ADDRESS
+ENV REACT_APP_API_ADDRESS $REACT_APP_API_ADDRESS
+
 COPY . ./
 
 RUN npm run build
